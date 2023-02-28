@@ -1,0 +1,23 @@
+#spring:
+#  datasource:
+#    driver-class-name: com.mysql.jdbc.Driver
+#    username: zsy
+#    password: zsy0311xm
+#    url: jdbc:mysql://124.223.11.78:3306/hmdp
+#  session:
+#    timeout: 86400
+#  redis:
+#    host: 124.223.11.78
+#    port: 6379
+#    password: zsy0311xm
+#    lettuce:
+#      pool:
+#        max-active: 10
+#        max-idle: 10
+#        min-idle: 1
+#        time-between-eviction-runs: 10s
+#
+#server:
+#  port: 8081
+#  address: 0.0.0.0
+#
