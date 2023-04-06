@@ -9,7 +9,7 @@
 #  redis:
 #    host: 124.223.11.78
 #    port: 6379
-#    password: zsy0311xm
+#    password: 
 #    lettuce:
 #      pool:
 #        max-active: 10
