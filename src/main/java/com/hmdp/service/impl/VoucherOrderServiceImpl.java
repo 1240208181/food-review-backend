@@ -291,8 +291,6 @@ public class VoucherOrderServiceImpl extends ServiceImpl<VoucherOrderMapper, Vou
     public void createVoucherOrder(VoucherOrder voucherOrder) {
         //5.一人一单
             Long userId = voucherOrder.getUserId();
-
-
             //5.1查询订单
             int count = query().eq("user_id", userId).eq("voucher_id", voucherOrder.getVoucherId()).count();
 
@@ -302,8 +300,6 @@ public class VoucherOrderServiceImpl extends ServiceImpl<VoucherOrderMapper, Vou
                 log.error("用户已经购买过一次");
                 return ;
             }
-
-
             //6.扣减库存
             boolean success = seckillVoucherService.update()
                     .setSql("stock=stock-1")
@@ -314,12 +310,7 @@ public class VoucherOrderServiceImpl extends ServiceImpl<VoucherOrderMapper, Vou
                 //扣减失败
                 return;
             }
-
-
-           ;
             save(voucherOrder);
             //7.返回订单id
-
-
     }
 }
